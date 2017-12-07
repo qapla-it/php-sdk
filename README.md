@@ -26,4 +26,4 @@ $couriers = $api->get('/1.1/getCouriers/');
 
 ## License
 
-For more information, please see the [license file](https://github.com/storeden/php-sdk/blob/master/LICENSE).
+For more information, please see the [license file](https://github.com/qapla-it/php-sdk/blob/master/LICENSE).
