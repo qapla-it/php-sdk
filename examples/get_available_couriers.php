@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-/** Push a new array of shipping to track **/
+/** get all available couriers **/
 
 require '../src/autoload.php';
 
