@@ -93,8 +93,6 @@ class HTTPClient {
 			$options[CURLOPT_POSTFIELDS] = json_encode($params);
 		}
 
-		var_dump($options);
-
 		$this->init();
 		$this->setArrayOptions($options);
 	}

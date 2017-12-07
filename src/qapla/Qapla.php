@@ -73,6 +73,8 @@ class Qapla {
 
 		}elseif($method == 'POST'){
 			$params['apiKey'] = $this->config['auth'];
+		}else{
+			throw new QaplaSDKException('Invalid HTTP Method specified');
 		}
 
 		$http_client->prepareConnection(
