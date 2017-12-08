@@ -1,10 +1,10 @@
-# QAPLA API for PHP
+# QAPLA' API for PHP
 
-This repository contains the PHP SDK that make your PHP app consume the Qapla API.
+This repository contains the PHP SDK that make your PHP app consume the Qapla' API.
 
 ## Setup
 
-QAPLA PHP SDK can be installed:
+QAPLA' PHP SDK can be installed:
 
 ```sh
 git clone https://github.com/qapla-it/php-sdk.git
