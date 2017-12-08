@@ -57,7 +57,7 @@ class HTTPClient {
 
 	public function execConnection(){
 		$this->rawMessage = curl_exec($this->qaplaCurlInstance);
-		var_dump($this->rawMessage);
+		//var_dump($this->rawMessage);
 	}
 
 	public function getErrno(){
