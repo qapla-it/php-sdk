@@ -48,7 +48,8 @@ class Qapla {
 	public function get($endpoint, $params = []){
 
 		if(!empty($params)){
-			return $this->api($endpoint.http_build_query($params), 'GET');
+			//return $this->api($endpoint.http_build_query($params), 'GET');
+            return $this->api($endpoint, 'GET', $params); //fixed get endpoint build with params
 		}
 
 		return $this->api($endpoint, 'GET');
@@ -65,12 +66,16 @@ class Qapla {
 
 		if($method == 'GET'){
 
+            if(!empty($params)){
+                $endpoint .= '?auth='.$this->config['auth'].'&'.http_build_query($params);  //fixed get endpoint build with params
+            }
+            /*
 			if( strpos('?', $endpoint) === false ){
 				$endpoint .= '?auth='.$this->config['auth'];
 			}else{
 				$endpoint .= '&auth='.$this->config['auth'];
 			}
-
+            */
 		}elseif($method == 'POST'){
 			$params['apiKey'] = $this->config['auth'];
 		}else{
