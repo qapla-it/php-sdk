@@ -17,7 +17,12 @@ $conf = [
     'auth' => '{your-auth-key}'
 ];
 
-$api = new Qapla\Qapla($config);
+try{
+    $api = new Qapla\Qapla($config);
+}
+catch(Qapla\QaplaSDKException $e){
+    exit($e->getMessage());
+}
 
 $couriers = $api->get('/1.1/getCouriers/');
 
