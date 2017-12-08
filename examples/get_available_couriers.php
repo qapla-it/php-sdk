@@ -43,6 +43,4 @@ else{
         echo $courier->code.', '.$courier->name.', '.$courier->country.'<br/>';
 
     }
-
-
 }
