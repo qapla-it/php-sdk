@@ -28,6 +28,6 @@ var_dump($_response);
 
 /** get italian couriers **/
 
-$_response = $sdk->get('/1.1/getCouriers/', ['it']);
+$_response = $sdk->get('/1.1/getCouriers/', ['country' => 'it']);
 
 var_dump($_response);
