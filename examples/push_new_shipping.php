@@ -29,7 +29,33 @@ $my_shipping = [
 			'courier' => 'BRT',
 			'shipDate' => 'YYYY-MM-DD',
 			'reference' => '{YOUR-SHIPPING-ID}'
-		]
+		],
+        [
+            "trackingNumber" => "1Z0V5V416840696736",
+            "courier" => "UPS",
+            "shipDate" => "2014-08-02",
+            "reference" => "ord. # 1674",
+            "orderDate" => "2014-07-30",
+            "name" => "Pepito Sbazzeguti",
+            "street" => "Via Aieie, 99",
+            "city" => "Parnazza",
+            "ZIP" => "12345",
+            "state" => "MQ",
+            "country" => "IT",
+            "email" => "name@domain.ext",
+            "telephone" => "02342522",
+            "agent" => "007@company.ext",
+            "amount" => "150,00",
+            "pod" => "1",
+            "shipping" => "8,00",
+            "custom1" => "valore custom 1",
+            "custom2" => "valore custom 2",
+            "custom3" => "valore custom 3",
+            "note" => "This is a note",
+            "deliveryDate" => "2014-07-31",
+            "tag" => "customer1",
+            "isTrackingNumber" => 1
+        ]
 	]
 ];
 
