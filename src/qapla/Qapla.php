@@ -66,6 +66,8 @@ class Qapla {
 
 		if($method == 'GET'){
 
+            $endpoint .= '?auth='.$this->config['auth'];
+
             if(!empty($params)){
                 $endpoint .= '?auth='.$this->config['auth'].'&'.http_build_query($params);  //fixed get endpoint build with params
             }
