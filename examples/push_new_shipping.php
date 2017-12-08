@@ -19,8 +19,12 @@
 /** Push a new array of shipping to track **/
 
 require '../src/autoload.php';
-
-$sdk = new Qapla\Qapla(['auth' => '{YOUR-AUTH-KEY}']);
+try{
+    $sdk = new Qapla\Qapla(['auth' => '{YOUR-AUTH-KEY}']);
+}
+catch(Qapla\QaplaSDKException $e){
+    exit($e->getMessage());
+}
 
 $my_shipping = [
 	'pushTrack' => [
@@ -59,7 +63,9 @@ $my_shipping = [
 	]
 ];
 
-
 $_response = $sdk->post('/1.1/pushTrack/', $my_shipping);
 
 var_dump($_response);
+
+/** print imported shipments */
+echo $_response->pushTrack->imported;
