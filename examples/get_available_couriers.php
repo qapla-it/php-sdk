@@ -31,9 +31,9 @@ var_dump($_response);
 $_response = $sdk->get('/1.1/getCouriers/', ['country' => 'it']);
 
 /** checking for errors */
-if($_response->getCouriers->result == 'KO' || $_response->getCouriers->error){
+if($_response->getCouriers->result == 'KO'){
 
-    echo $_response->getCouriers->message;
+    echo $_response->getCouriers->error;
 }
 else{
     /** looping couriers */
