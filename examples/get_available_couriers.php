@@ -25,3 +25,9 @@ $sdk = new Qapla\Qapla(['auth' => '{YOUR-AUTH-KEY}']);
 $_response = $sdk->get('/1.1/getCouriers/');
 
 var_dump($_response);
+
+/** get italian couriers **/
+
+$_response = $sdk->get('/1.1/getCouriers/', ['it']);
+
+var_dump($_response);
