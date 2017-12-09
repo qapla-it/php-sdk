@@ -22,6 +22,8 @@ class Qapla {
 
 	const SDK_VERSION = '0.5-alpha';
 
+	const API_VERSION = '1.1';
+
 	const AUTH_KEY = '';
 
 	protected $config;
@@ -48,7 +50,7 @@ class Qapla {
 	public function get($endpoint, $params = []){
 
 		if(!empty($params)){
-			//return $this->api($endpoint.http_build_query($params), 'GET');
+
             return $this->api($endpoint, 'GET', $params); //fixed get endpoint build with params
 		}
 
@@ -66,7 +68,7 @@ class Qapla {
 
 		if($method == 'GET'){
 
-            $endpoint .= '?auth='.$this->config['auth'];
+            $endpoint .= '?apiKey='.$this->config['auth'];
 
             if(!empty($params)){
                 $endpoint .= '?auth='.$this->config['auth'].'&'.http_build_query($params);  //fixed get endpoint build with params

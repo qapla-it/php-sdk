@@ -20,7 +20,12 @@
 
 require '../src/autoload.php';
 
-$sdk = new Qapla\Qapla(['auth' => '{YOUR-AUTH-KEY}']);
+try{
+    $sdk = new Qapla\Qapla(['auth' => '{YOUR-AUTH-KEY}']);
+}
+catch(Qapla\QaplaSDKException $e){
+    exit($e->getMessage());
+}
 
 $_response = $sdk->get('/1.1/getCouriers/');
 
