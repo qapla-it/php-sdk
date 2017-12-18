@@ -13,7 +13,7 @@ git clone https://github.com/qapla-it/php-sdk.git
 ## Example
 
 ```php
-$conf = [
+$config = [
     'auth' => '{your-auth-key}'
 ];
 
