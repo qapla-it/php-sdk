@@ -1,3 +1,6 @@
+# DEPRECATED
+This repository is deprecated and no longer maintained.
+
 # QAPLA' API for PHP
 
 This repository contains the PHP SDK that make your PHP app consume the Qapla' API.
